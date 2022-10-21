@@ -1,5 +1,5 @@
 import React from "react";
-import slyled from "styled-components";
+import styled from "styled-components";
 import Titulo from "../Titulo";
 import Conta from "../Conta";
 
@@ -12,6 +12,11 @@ const Couteudo = styled.section`
 display: flex;
   flex-direction: row;
   justify-content: space-between;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+  
 }
 `;
 
