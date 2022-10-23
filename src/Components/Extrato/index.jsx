@@ -1,6 +1,21 @@
 import React from "react";
-import { Box } from "../../Components/UI";
+import { Box, Botao } from "../../Components/UI";
+import { extratoLista } from "../../info";
 
 const Extrato = () => {
-  return <Box></Box>;
+  return (
+    <Box>
+      {extratoLista.updates.map(({ id, type, from, value, date }) => {
+        return (
+          <div key={id}>
+            <div>{type}</div>
+            <div>{from}</div>
+          </div>
+        );
+      })}
+      <Botao>Ver Mais</Botao>
+    </Box>
+  );
 };
+
+export default Extrato;
